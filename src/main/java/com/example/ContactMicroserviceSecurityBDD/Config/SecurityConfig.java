@@ -21,31 +21,6 @@ import java.util.List;
 @EnableWebSecurity
 public class SecurityConfig {
 
-    /**
-     * @Bean public InMemoryUserDetailsManager userDetailsManager() throws Exception {
-     * List<UserDetails> users = List.of(
-     * <p>
-     * User
-     * .withUsername("user1")
-     * .password("{noop}user1")
-     * .roles("USERS")
-     * .build(),
-     * User
-     * .withUsername("user2")
-     * .password("{noop}user2")
-     * .roles("OPERATOR")
-     * .build(),
-     * User
-     * .withUsername("admin")
-     * .password("{noop}admin")
-     * .roles("ADMIN")
-     * .build());
-     * <p>
-     * return new InMemoryUserDetailsManager(users);
-     * }
-     */
-
-
     @Bean
     public JdbcUserDetailsManager userDetailsManager() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
